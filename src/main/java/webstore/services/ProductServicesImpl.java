@@ -3,7 +3,7 @@ package webstore.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import webstore.models.Product;
-import webstore.repositories.ProductRepositories;
+import webstore.repositories.ProductRepository;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class ProductServicesImpl implements ProductServices {
 
     @Autowired
-    private ProductRepositories productRepositories;
+    private ProductRepository productRepositories;
 
 
     @Override

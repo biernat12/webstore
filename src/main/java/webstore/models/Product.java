@@ -18,6 +18,18 @@ public class Product{
     private String category;
     private int unitsInStock;
     private int unitsInOrder;
+   // private boolean discontinued;
+
+
+//
+//    public boolean isDiscontinued() {
+//
+//        return discontinued;
+//    }
+//
+//    public void setDiscontinued(boolean discontinued) {
+//        this.discontinued = discontinued;
+//    }
 
     public Product() {
 
@@ -86,4 +98,10 @@ public class Product{
         this.unitsInOrder = unitsInOrder;
     }
 
+
+//    public Product(Long productId, String name, double unitPrice) {
+//        this.productId = productId;
+//        this.name = name;
+//        this.unitPrice = unitPrice;
+//    }
 }
