@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" ></link>
+    <title>Sklep Internetowy</title>
+</head>
+<body>
+<section>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Dodawanie produktu</h1>
+        </div>
+    </div>
+</section>
+
+<form action="#" th:action="@{/add}" th:object="${product}" method="post">
+    <div class="form-group">
+    Nazwa: <input type="text"  class="form-control" th:field="*{name}" /><br />
+    Kategoria: <input type="text" class="form-control" th:field="*{category}" /><br />
+    Opis: <input type="text" class="form-control" th:field="*{description}" /><br />
+    Twórca: <input type="text" class="form-control" th:field="*{manufacturer}" /><br />
+    Cena: <input type="text" class="form-control" th:field="*{unitPrice}" /><br />
+    Liczba sztuk w magazynie: <input type="text" class="form-control" th:field="*{unitsInStock}" /><br />
+    </div>
+    <button type="submit" >Dodaj produkt</button>
+</form>
+
+</body>
+</html>
