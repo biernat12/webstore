@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" ></link>
-    <title>Sklep internetowy</title>
+<head th:replace="layout :: head">
 </head>
 <body>
-
-<section>
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Produkt</h1>
-        </div>
-    </div>
-</section>
+<div th:replace="layout :: body" />
 <section class="container">
     <div class="row">
         <div class="col-md-5" th:each="prod: ${product}">

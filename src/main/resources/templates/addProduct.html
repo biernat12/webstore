@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<div th:replace="layout :: body" />
+<div class="jumbotron">
+    <div class="container text-center">
+        <h2>Dodawanie produktu do sklepu.</h2>
+    </div>
+</div>
+<form action="#" th:action="@{/add}" th:object="${product}" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Nazwa</label>
+        <div class="col-sm-9">
+            <input type="text" id="name" th:field="*{name}" th:placeholder="Nazwa" class="form-control" th:autofocus="true"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category" class="col-sm-3 control-label">Kategoria</label>
+        <div class="col-sm-9">
+            <input type="text" id="category" th:field="*{category}" th:placeholder="Kategoria" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="description" class="col-sm-3 control-label">Opis</label>
+        <div class="col-sm-9">
+            <input type="text" id="description" th:field="*{description}" th:placeholder="Opis" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="manufacturer" class="col-sm-3 control-label">Twórca</label>
+        <div class="col-sm-9">
+            <input type="text" id="manufacturer" th:field="*{manufacturer}" th:placeholder="Twórca" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="unitPrice" class="col-sm-3 control-label">Cena</label>
+        <div class="col-sm-9">
+            <input type="number" id="unitPrice" th:field="*{unitPrice}" th:placeholder="Cena" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="unitsInStock" class="col-sm-3 control-label">Liczba sztuk</label>
+        <div class="col-sm-9">
+            <input type="number" id="unitsInStock" th:field="*{unitsInStock}" th:placeholder="|Liczba sztuk|" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3 col-sm-offset-3">
+            <button type="submit" class="btn btn-primary btn-block">Dodaj produkt</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

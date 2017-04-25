@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" ></link>
-    <title>Sklep Internetowy</title>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
 </head>
 <body>
-    <section>
-        <div class="jumbotron">
-            <div class="container">
-                <h1 th:text="${greeting}"></h1>
-                <p th:text="${tagline}"></p>
-            </div>
-        </div>
-    </section>
-    <a href="/products" class="btn btn-success">
-        <span class="glyphicon-circle-arrow-left glyphicon"></span>
-        Lista produktów
-    </a>
-    <a href="/add" class="btn btn-success">
-        <span class="glyphicon-circle-arrow-left glyphicon"></span>
-        Dodaj produkt
-    </a>
+<div th:replace="layout :: body" />
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1 th:text="${greeting}"></h1>
+        <p th:text="${tagline}"></p>
+    </div>
+</div>
 </body>
 </html>
