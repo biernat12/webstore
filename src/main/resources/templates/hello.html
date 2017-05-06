@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org">
-<head th:replace="layout :: head">
+<head th:replace="template/layout :: head">
 </head>
 <body>
-<div th:replace="layout :: body" />
+<div th:replace="template/layout :: body" />
 <div class="jumbotron">
     <div class="container text-center">
         <h1 th:text="${greeting}"></h1>

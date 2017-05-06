@@ -3,5 +3,6 @@ package webstore.services;
 import webstore.models.User;
 
 public interface UserService {
-    void addUser(User user);
+	public User findUserByEmail(String email);
+	public void saveUser(User user);
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/layout :: head">
+</head>
+<body>
+<div th:replace="template/layout :: body"/>
+<section>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Szczegółowe informacje</h1>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h3 th:text=" ${product.name}"></h3>
+            <p th:text="${product.description}"></p>
+            <p>
+                <strong>Kod produktu: </strong><span class="labellabel-warning" th:text="${product.productId}"></span>
+            </p>
+            <p>
+                <strong th:text="|Producent: ${product.manufacturer}|"></strong>
+            </p>
+            <p>
+                <strong th:text="|Kategoria: ${product.category}|"></strong>
+            </p>
+            <p>
+                <strong th:text="|Dostępna liczba sztuk: ${product.unitsInStock}|"></strong>
+            </p>
+            <h4 th:text="${product.unitPrice}">PLN</h4>
+            <p>
+                <a href="#" class="btn btn-warning btn-large">
+                    <span class="glyphicon-shopping-cart glyphicon"></span>
+                    Zamów teraz
+                </a>
+                <a href="/products" class="btn btn-success">
+                    <span class="glyphicon-circle-arrow-left glyphicon"></span>
+                    Powrót
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
